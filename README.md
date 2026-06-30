@@ -1,7 +1,7 @@
-please open to edit then you will be able to see all the codes 
 
 
-#Answer 1
+
+# Answer 1
 
 
 
@@ -105,7 +105,7 @@ print(f" Can carry 1.8kg camera: {can_carry_camera}")
 
 #max takeoff weight in grams,
 max_takeoff_grams = int(max_takeoff_weight * 1000)
-# Print  gram value
+#Print  gram value
 print(f" Max takeoff weight in grams: {max_takeoff_grams}g")
 
 
@@ -512,15 +512,15 @@ for step in range(steps):
 
 
 
-# Predefined credentials
+#Predefined credentials
 true_id = "admin"
 true_pass = "drone123"
 
-# Accept input and convert to lowercase using .lower()
+#Accept input and convert to lowercase using .lower()
 user_id = input("Enter ID: ").lower()
 user_pass = input("Enter Password: ").lower()
 
-# Compare against predefined strings
+#Compare against predefined strings
 if user_id == true_id and user_pass == true_pass:
     print("Drone connected successfully")
 else:
@@ -532,7 +532,7 @@ else:
 
 
 
-#ans15
+# Ans15
 
 
 
@@ -541,13 +541,13 @@ else:
 
 
 
-# Accept a string input
+#Accept a string input
 text = input("Enter a string: ")
 print(f"You entered: {text}")
 
-# Initialize a counter at zero
+#Initialize a counter at zero
 vowels = 0
-# Check every character in the lowercase version of the string
+#Check every character in the lowercase version of the string
 for char in text.lower():
     # If the character exists in the string "aeiou", it's a vowel
     if char in "aeiou":
@@ -560,7 +560,7 @@ print(f"Number of vowels: {vowels}")
 
 
 
-#ans16
+# ans16
 
 
 
@@ -568,13 +568,13 @@ print(f"Number of vowels: {vowels}")
 
 
 
-# Take a single letter from the user
+#Take a single letter from the user
 letter = input("Enter a lowercase letter: ")
 
-# ord() gets the ASCII integer (e.g., 'a' is 97). 
-# Subtracting 32 jumps to the uppercase ASCII equivalent (e.g., 'A' is 65).
+#ord() gets the ASCII integer (e.g., 'a' is 97). 
+#Subtracting 32 jumps to the uppercase ASCII equivalent (e.g., 'A' is 65).
 upper_ascii = ord(letter) - 32
-# chr() converts the new integer back into a character string
+#chr() converts the new integer back into a character string
 upper_letter = chr(upper_ascii)
 
 print(f"Output: {upper_letter}")
@@ -584,7 +584,7 @@ print(f"Output: {upper_letter}")
 
 
 
-#ans17
+# Ans17
     
 
 
@@ -599,19 +599,19 @@ print(f"Output: {upper_letter}")
 import cv2 as cv
 import numpy as np
 
-# Load the image
+#Load the image
 img = cv.imread(r"C:\Users\surya\OneDrive\Desktop\improve\landingpage.png")
 
-# Convert the image to grayscale 
+#Convert the image to grayscale 
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
-#  pixel above 200 becomes 255 
+#pixel above 200 becomes 255 
 _, thresh = cv.threshold(gray, 200, 255, cv.THRESH_BINARY)
 
-# Find contours
+#Find contours
 contours, _ = cv.findContours(thresh, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
 
-# Loop through the shapes
+#Loop through the shapes
 for cnt in contours:
     #  smooth out edges
     epsilon = 0.04 * cv.arcLength(cnt, True)
@@ -627,6 +627,6 @@ for cnt in contours:
         print("landing")
         break # We found the pad, no need to check other contours
 
-# Save the final marked image to the disk
+#Save the final marked image to the disk
 cv.imwrite("sahi.jpg", img)
 
